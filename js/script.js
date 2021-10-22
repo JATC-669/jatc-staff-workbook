@@ -86,4 +86,4 @@ const toggleRows = {
 
 }
 
-toggleRows.init()
+toggleRows.init();

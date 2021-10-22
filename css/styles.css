@@ -22,9 +22,22 @@ a {
     text-decoration: none;
 }
 
-a:link,
+a,
 a:visited {
     color: #58595B;
+}
+
+a.disabled {
+    background-color: #F2C063;
+}
+
+a.disabled::after {
+    content: " (link disabled)";
+}
+
+section ul li a.disabled:hover {
+    box-shadow: none;
+    background-color: #F2C063;
 }
 
 nav ul {
