@@ -1,0 +1,66 @@
+/* Table styles */
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  overflow: scroll;
+}
+
+th {
+  background: #58595B;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  box-shadow: 0 2px 2px -1px lightgray;
+  color: white;
+  padding: 0.5rem;
+}
+
+td {
+  border: 2px solid #58595B;
+  padding: 0.694rem;
+  text-align: center;
+  height: 200px;
+  width: 500px;
+}
+
+tr:nth-child(even) {
+  background: #F2C063;
+}
+
+.background-toggle:nth-child(even) {
+  background: none;
+}
+
+
+table.phone-call-ref-table th, 
+table.phone-call-ref-table td {
+  height: auto;
+  width: auto;
+}
+
+table.phone-call-ref-table td:only-child {
+  background-color: lightgray;
+  text-align: left;
+}
+
+.hide {
+  display: none;
+}
+
+/* Course Dropdown Styles */
+form {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+button {
+  border: none;
+  font: 1.25rem inherit;
+  box-shadow: none;
+}
+
+select {
+  font-size: 1.3rem;
+  border: 2px solid #F2C063;
+  border-radius: 5px;
+}
