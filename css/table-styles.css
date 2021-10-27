@@ -4,6 +4,9 @@ table {
   table-layout: fixed;
   overflow: scroll;
 }
+tr:nth-child(even) {
+  background: var(--gold);
+}
 
 td,
 th {
@@ -26,9 +29,11 @@ td {
   width: 500px;
 }
 
-tr:nth-child(even) {
-  background: #F2C063;
+td strong {
+  font-weight: 900;
 }
+
+
 
 /* Table Background and Sort Styles */
 .background-toggle:nth-child(even) {
@@ -39,14 +44,17 @@ tr:nth-child(even) {
   display: none;
 }
 
-/* Privacy Guide Styles */
+/* Privacy Guide Styles & Phone Numbers Quick Guide Styles */
 table.privacy-guide-table th, 
-table.privacy-guide-table td {
+table.privacy-guide-table td,
+table.phone-numbers-quick-guide th, 
+table.phone-numbers-quick-guide td {
   height: auto;
   width: auto;
 }
 
-table.privacy-guide-table td:only-child {
+table.privacy-guide-table td:only-child, 
+table.phone-numbers-quick-guide td:only-child {
   background-color: lightgray;
   text-align: left;
 }
