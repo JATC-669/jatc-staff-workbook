@@ -13,6 +13,7 @@ th {
   box-shadow: 0 2px 2px -1px lightgray;
   color: white;
   padding: 0.5rem;
+  border: 2px solid #58595B;
 }
 
 td {
@@ -32,13 +33,13 @@ tr:nth-child(even) {
 }
 
 
-table.phone-call-ref-table th, 
-table.phone-call-ref-table td {
+table.privacy-guide-table th, 
+table.privacy-guide-table td {
   height: auto;
   width: auto;
 }
 
-table.phone-call-ref-table td:only-child {
+table.privacy-guide-table td:only-child {
   background-color: lightgray;
   text-align: left;
 }
