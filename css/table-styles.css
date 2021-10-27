@@ -3,7 +3,9 @@ table {
   border-collapse: collapse;
   table-layout: fixed;
   overflow: scroll;
+  margin: 0 auto;
 }
+
 tr:nth-child(even) {
   background: var(--gold);
 }
@@ -59,7 +61,6 @@ table.phone-numbers-quick-guide td:only-child {
   text-align: left;
 }
 
-
 /* Quarter's End Chart Styles */
 aside table {
   width: 90%;
@@ -85,4 +86,43 @@ aside td {
 
 aside tr:last-child td{
   border-bottom: none;
+}
+
+/* Smaller Screens */
+
+@media only screen and (max-width: 800px) {
+
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+    text-align: left;
+  }
+
+  table.phone-numbers-quick-guide td:empty {
+    display: none;
+  }
+
+  table.phone-numbers-quick-guide td:nth-child(1)::before {
+    content: "Name: ";
+  }
+
+  table.phone-numbers-quick-guide td:nth-child(2)::before {
+    content: "Phone: ";
+  }
+
+  table.phone-numbers-quick-guide td:nth-child(3)::before {
+    content: "Email: ";
+  }
+
+  table.phone-numbers-quick-guide td:nth-child(4)::before {
+    content: "Job Title / Department: ";
+  }
+  
+  table.phone-numbers-quick-guide td:only-child::before {
+    content: none;
+  }
+  
 }

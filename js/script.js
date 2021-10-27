@@ -28,6 +28,8 @@ const toggleRows = {
 
         this.resetButton.addEventListener('click', this.resetTable);
 
+        this.addJatcPhoneOnSmallScreen();
+
     },
 
     resetTable : function() {
@@ -39,7 +41,6 @@ const toggleRows = {
         }
 
     },
-
 
     showHideRows : function() {
         let courses = toggleRows.courses;
@@ -82,7 +83,6 @@ const toggleRows = {
         }
 
     }
-
 
 }
 
