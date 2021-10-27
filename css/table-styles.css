@@ -1,9 +1,13 @@
 /* Table styles */
-
 table {
   border-collapse: collapse;
   table-layout: fixed;
   overflow: scroll;
+}
+
+td,
+th {
+  border: 2px solid #58595B;
 }
 
 th {
@@ -13,11 +17,9 @@ th {
   box-shadow: 0 2px 2px -1px lightgray;
   color: white;
   padding: 0.5rem;
-  border: 2px solid #58595B;
 }
 
 td {
-  border: 2px solid #58595B;
   padding: 0.694rem;
   text-align: center;
   height: 200px;
@@ -28,11 +30,16 @@ tr:nth-child(even) {
   background: #F2C063;
 }
 
+/* Table Background and Sort Styles */
 .background-toggle:nth-child(even) {
   background: none;
 }
 
+.hide {
+  display: none;
+}
 
+/* Privacy Guide Styles */
 table.privacy-guide-table th, 
 table.privacy-guide-table td {
   height: auto;
@@ -44,24 +51,30 @@ table.privacy-guide-table td:only-child {
   text-align: left;
 }
 
-.hide {
-  display: none;
+
+/* Quarter's End Chart Styles */
+aside table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border: 5px solid #6593A6;
+  border-radius: 6px;
+  --moz-border-radius: 6px;
+  border-spacing: 0;
 }
 
-/* Course Dropdown Styles */
-form {
-  text-align: center;
-  margin-bottom: 2rem;
+aside tr:nth-child(even) {
+  background: none;
 }
 
-button {
+aside td {
   border: none;
-  font: 1.25rem inherit;
-  box-shadow: none;
+  border-bottom: 1.25px solid #6593A6;
+  padding: 0.75rem;
+  height: auto;
+  width: auto;
 }
 
-select {
-  font-size: 1.3rem;
-  border: 2px solid #F2C063;
-  border-radius: 5px;
+aside tr:last-child td{
+  border-bottom: none;
 }
