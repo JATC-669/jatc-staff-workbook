@@ -6,6 +6,13 @@ table {
   margin: 0 auto;
 }
 
+table ul {
+  list-style-type: circle;
+  margin-left: 2rem;
+  padding: auto;
+  text-align: left;
+}
+
 tr:nth-child(even) {
   background: var(--gold);
 }
@@ -25,7 +32,7 @@ th {
 }
 
 td {
-  padding: 0.694rem;
+  padding: 0.25rem;
   text-align: center;
   height: 200px;
   width: 500px;
@@ -35,8 +42,6 @@ td strong {
   font-weight: 900;
 }
 
-
-
 /* Table Background and Sort Styles */
 .background-toggle:nth-child(even) {
   background: none;
@@ -45,6 +50,7 @@ td strong {
 .hide {
   display: none;
 }
+
 
 /* Privacy Guide Styles & Phone Numbers Quick Guide Styles */
 table.privacy-guide-table th, 
@@ -91,16 +97,68 @@ aside tr:last-child td{
 /* Smaller Screens */
 
 @media only screen and (max-width: 800px) {
+  
+   tr {
+    border: 2px solid #58595B;
+  }
 
   th {
     display: none;
   }
-
+  
   td {
     display: block;
     text-align: left;
+    width: auto;
+    height: auto;
+    border: none;
+  }
+  
+  td::before {
+    font-weight: 900;
   }
 
+  /* Quarter's End Styles */
+  aside table td:nth-child(1) {
+    background-color: transparent;
+  }
+
+  /* SPR & SPF Course Table Styles */
+  table td:nth-child(1) {
+    background-color: lightcoral;
+    border-bottom: 2px solid #58595B;
+    font-weight: 900;
+  }
+
+  table td:nth-child(1)::before {
+    content: "Course: ";
+  }
+
+  table td:nth-child(2)::before {
+    content: "Course Name: ";
+  }
+
+  table td:nth-child(3)::before {
+    content: "No. of Lessons: ";
+  }
+
+  table td:nth-child(4)::before {
+    content: "Final Exam: ";
+  }
+
+  table td:nth-child(5)::before {
+    content: "Course Kit Contains: ";
+  }
+
+  table td:nth-child(6)::before {
+    content: "Online Study Guide: ";
+  }
+
+  table td:nth-child(7)::before {
+    content: "Additional Online Material: ";
+  }
+
+  /* Phone Number Table Styles */
   table.phone-numbers-quick-guide td:empty {
     display: none;
   }
