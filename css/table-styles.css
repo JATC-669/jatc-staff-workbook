@@ -32,7 +32,7 @@ th {
 }
 
 td {
-  padding: 0.25rem;
+  padding: 0.5rem;
   text-align: center;
   height: 200px;
   width: 500px;
@@ -52,11 +52,13 @@ td strong {
 }
 
 
-/* Privacy Guide Styles & Phone Numbers Quick Guide Styles */
+/* Privacy Guide Styles, Phone Numbers Quick Guide Styles, & OILS Course Reference Styles*/
 table.privacy-guide-table th, 
 table.privacy-guide-table td,
 table.phone-numbers-quick-guide th, 
-table.phone-numbers-quick-guide td {
+table.phone-numbers-quick-guide td,
+table.oils-reference th, 
+table.oils-reference td {
   height: auto;
   width: auto;
 }
@@ -96,7 +98,7 @@ aside tr:last-child td{
 
 /* Smaller Screens */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
   
    tr {
     border: 2px solid #58595B;
@@ -182,5 +184,35 @@ aside tr:last-child td{
   table.phone-numbers-quick-guide td:only-child::before {
     content: none;
   }
+
+  /* OILS Course Reference Table Styles */
+  table.oils-reference td:nth-child(1)::before {
+    content: "Banner Lesson Number: ";
+  }
+
+  table.oils-reference td:nth-child(2)::before {
+    content: "OILS Lesson Title: ";
+  }
+
+  table.oils-reference td:nth-child(3)::before {
+    content: "OILS Lesson Quiz Title: ";
+  }
   
+
+  /* Privacy Guide Styles */
+  table.privacy-guide-table td::before {
+    content: none;
+  }
+
+  table.privacy-guide-table th, 
+  table.privacy-guide-table td {
+    display: revert;
+    border: 2px solid #58595B;
+  }
+
+  table.privacy-guide-table td {
+    background-color: unset;
+    font-weight: unset;
+  }
+
 }
