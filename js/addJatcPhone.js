@@ -9,7 +9,7 @@
  const addPhoneNumberOnSmallScreen = {
 
     init : function() {
-        if (window.matchMedia('(max-width: 800px)').matches) {
+        if (window.matchMedia('(max-width: 900px)').matches) {
             this.addJatcPhoneOnSmallScreen();
         }
     },
