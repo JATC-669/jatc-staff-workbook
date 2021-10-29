@@ -19,11 +19,11 @@ tr:nth-child(even) {
 
 td,
 th {
-  border: 2px solid #58595B;
+  border: 2px solid var(--gray);
 }
 
 th {
-  background: #58595B;
+  background: var(--gray);
   position: sticky;
   top: 0; /* Don't forget this, required for the stickiness */
   box-shadow: 0 2px 2px -1px lightgray;
@@ -69,39 +69,14 @@ table.phone-numbers-quick-guide td:only-child {
   text-align: left;
 }
 
-/* Quarter's End Chart Styles */
-aside table {
-  width: 90%;
-  margin: 0 auto;
-  border-collapse: separate;
-  border: 5px solid #6593A6;
-  border-radius: 6px;
-  --moz-border-radius: 6px;
-  border-spacing: 0;
-}
 
-aside tr:nth-child(even) {
-  background: none;
-}
-
-aside td {
-  border: none;
-  border-bottom: 1.25px solid #6593A6;
-  padding: 0.75rem;
-  height: auto;
-  width: auto;
-}
-
-aside tr:last-child td{
-  border-bottom: none;
-}
 
 /* Smaller Screens */
 
 @media only screen and (max-width: 900px) {
   
    tr {
-    border: 2px solid #58595B;
+    border: 2px solid var(--gray);
   }
 
   th {
@@ -127,8 +102,8 @@ aside tr:last-child td{
 
   /* SPR & SPF Course Table Styles */
   table td:nth-child(1) {
-    background-color: lightcoral;
-    border-bottom: 2px solid #58595B;
+    background-color: lightgray;
+    border-bottom: 2px solid var(--gray);
     font-weight: 900;
   }
 
@@ -207,7 +182,7 @@ aside tr:last-child td{
   table.privacy-guide-table th, 
   table.privacy-guide-table td {
     display: revert;
-    border: 2px solid #58595B;
+    border: 2px solid var(--gray);
   }
 
   table.privacy-guide-table td {
