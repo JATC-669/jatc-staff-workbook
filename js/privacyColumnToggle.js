@@ -1,12 +1,6 @@
 const privacyColumnToggle = {
 
-    table : document.querySelector('.privacy-guide-table'),
-
-    column: document.querySelectorAll('col'),
-
-    tableHeader : document.querySelectorAll('th'),
-
-    tableData : document.querySelectorAll('td'),
+    tableHeaderRow : document.querySelector('thead > tr'),
 
     resetButton : document.querySelector('button'),
 
@@ -16,23 +10,26 @@ const privacyColumnToggle = {
 
     privacyColumnToggle : function() {
 
-        // let data = privacyColumnToggle.tableHeader;
-        let data = privacyColumnToggle.table;
-        let col = privacyColumnToggle.column;
+        let tableData = document.querySelectorAll('tbody > td');
+        console.log(tableData)
 
-        console.log(col)
+        // for(let i = 0; i < header.length; i ++) {
+        //     // console.log(header[i].textContent)
 
-        // for( item of data) {
-        //     console.log(item.textContent)
+        //     header[i].addEventListener('click', function(event) {
+        //         console.log(`${event.target.textContent} was clicked!`);
+        //     });
         // }
 
-        // data.addEventListener('click', (event) => {
-        //     console.log(`${event.currentTarget.textContent} was clicked`);
-        // })
+        privacyColumnToggle.tableHeaderRow.addEventListener('click', function(event) {
+            if(event.target.textContent === "" || event.target.textContent === "Notes, Special Instructions") {
+                event.preventDefault();
+            } else {
+                console.log(`${event.target.textContent} was clicked!`);
+            }
 
-        // console.log(`${event.target.textContent} was clicked`)
+        })
         
-
     },
 }
 
