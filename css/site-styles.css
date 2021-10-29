@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Rubik:wght@600&display=swap');
-/* * {border: 1px solid salmon;} */
 
 :root {
     --body-font-family: 'Roboto', sans-serif;
@@ -10,6 +9,8 @@
     --h1-font-size: calc(var(--base-font-size) * var(--base) * var(--base) * var(--base));
     --bg-color: #f2f2f2;
     --gold: #F2C063;
+    --gray: #58595B;
+    --blue: #6593A6;
 
 }
 
@@ -25,11 +26,11 @@ a {
 
 a,
 a:visited {
-    color: #58595B;
+    color: var(--gray);
 }
 
 a.disabled {
-    background-color: #F2C063;
+    background-color: var(--gold);
     cursor: not-allowed;
 }
 
@@ -39,7 +40,7 @@ a.disabled::after {
 
 section ul li a.disabled:hover {
     box-shadow: none;
-    background-color: #F2C063;
+    background-color: var(--gold);
 }
 
 nav ul {
@@ -48,25 +49,24 @@ nav ul {
 }
 
 nav ul li {
-    color: #58595B;
+    color: var(--gray);
     margin: 1rem 0;
 }
 
 nav ul li a,
 button {
-    background: #F2C063;
+    background: var(--gold);
     padding: 0.5rem 1rem;
     border-radius: 10%;
-    box-shadow: 5px 5px 5px #58595B;
+    box-shadow: 5px 5px 5px var(--gray);
     margin: 0.5rem 1rem;
 }
 
 nav ul li a:hover,
 button:hover {
     background: white;
-    color: #F2C063;
+    color: var(--gold);
 }
-
 
 h1,
 h2,
@@ -78,13 +78,11 @@ caption {
 }
 
 h1 {
-    /* font-size: 2.074rem; */
     font-size: var(--h1-font-size);
 }
 
 h2,
 caption {
-    /* font-size: 1.44rem; */
     font-size: var(--h2-font-size);
 }
 
@@ -93,12 +91,18 @@ main.home-page-wrapper {
     margin: 0 auto;
 }
 
-ul {
+ul,
+ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+footer p {
+    text-align: center;
+}
+
+/* Web Resources, Tools, Course References, WCC Resources Styles (on homepage) */
 section ul li {
     margin: 0.694rem 0;
 }
@@ -110,21 +114,43 @@ section ul li:first-child {
 section ul li a {
     display: block;
     padding: 0.694rem;
-    border: 5px solid #F2C063;
+    border: 5px solid var(--gold);
     border-radius: 5px;
 }
 
 section ul li a:hover {
-    background-color: #F2CF63;
-    box-shadow: 5px 5px 5px #58595B;
+    background-color: var(--gold);
+    box-shadow: 5px 5px 5px var(--gray);
 }
 
+
+/* Quarter's End Chart Styles (on homepage) */
 aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside ol {
     margin-top: 1.25rem;
+    width: 90%;
+    border: 5px solid var(--blue);
+    border-radius: 6px;
+    --moz-border-radius: 6px;
+    text-align: center;
+}
+
+aside li {
+    border-bottom: 2px solid var(--blue);
+    padding: 0.694rem;
+}
+
+aside li:last-child {
+    border-bottom: none;
 }
 
 
-/* Course Dropdown Styles */
+/* Course Dropdown Styles (on course pages) */
 form {
     text-align: center;
     margin-bottom: 2rem;
@@ -138,41 +164,15 @@ button {
 
 select {
     font-size: 1.3rem;
-    border: 2px solid #F2C063;
+    border: 2px solid var(--gold);
     border-radius: 5px;
-}
-
-footer p {
-    text-align: center;
-}
-
-
-footer nav ul {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    /* position: fixed;
-    bottom: 0px; */
-}
-
-footer nav ul li a {
-    background: transparent;
-    padding: 0.5rem 1rem;
-    border-radius: 10%;
-    box-shadow: 2px 2px 2px #58595B;
-    margin: 0.5rem 1rem;
-    border: 3px solid transparent;
-}
-
-footer nav ul li a:hover {
-    border: 3px solid white;
-    background: white;
 }
 
 
 
 @media only screen and (min-width: 1200px) {
 
+    /* Homepage styles */
     header {
         display: flex;
         justify-content: space-between;
@@ -186,7 +186,6 @@ footer nav ul li a:hover {
     nav ul {
         flex-basis: 70%;
         display: flex;
-        /* justify-content: space-around; */
     }
 
     nav ul li {
@@ -208,6 +207,7 @@ footer nav ul li a:hover {
 
     aside {
         flex-basis: 20%;
+        align-self: flex-start;
     }
     
 }
