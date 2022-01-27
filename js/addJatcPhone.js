@@ -22,13 +22,15 @@
     addJatcPhoneOnSmallScreen: function() {
         let jatcPhone = document.querySelectorAll('.jatc-phone');
         let jatcPhoneArray = Array.from(jatcPhone);
-
-       jatcPhoneArray.forEach( (item) => {
-           item.insertAdjacentHTML('afterend', '<td class="jatc-phone-added">800-638-0592</td>');
-       });
+        console.log(`I was called!`);
+        
+        jatcPhoneArray.forEach( (item) => {
+            item.insertAdjacentHTML('afterend', '<td class="jatc-phone-added">800-638-0592</td>');
+        });
     },
-
+    
     removeJatcPhoneOnSmallScreen: function() {
+        console.log(`I was called!`);
         let jatcPhone = document.querySelectorAll('.jatc-phone-added');
         jatcPhone.forEach( (item) => {
             item.remove();
