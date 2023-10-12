@@ -1,0 +1,17 @@
+.oils ul li {
+    color: blue;
+    margin: 1rem 0;
+}
+
+.oils ul li a {
+    background: aquamarine;
+    padding: 0.5rem 1rem;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px lightcoral;
+    margin: 0.5rem 1rem;
+}
+
+.oils ul li a:hover {
+    background: white;
+    color: var(--gold);
+}
