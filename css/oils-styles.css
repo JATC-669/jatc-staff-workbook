@@ -1,6 +1,10 @@
+.oils ul {
+    display: block;
+}
+
 .oils ul li {
     color: blue;
-    margin: 1rem 0;
+    margin: 3% 0;
 }
 
 .oils ul li a {
