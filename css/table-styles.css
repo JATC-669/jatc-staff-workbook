@@ -75,7 +75,7 @@ table.phone-numbers-quick-guide td:only-child {
 
 @media only screen and (max-width: 900px) {
   
-   tr {
+  tr {
     border: 2px solid var(--gray);
   }
 
